@@ -11,3 +11,5 @@ Somos la alianza definitiva de supervillanos. Mientras los héroes se dividen en
 
 1. **Lex Luthor** - El cerebro detrás de la operación. Su inteligencia y recursos son inigualables.
 2. **Joker** - El caos hecho carne. Su imprevisibilidad es nuestra mayor arma.
+3. **Thanos** - El titán loco con un plan maestro. Su obsesión por el equilibrio lo hace un aliado formidable.
+4. **Magneto** - El maestro del magnetismo. Su control sobre los metales es esencial para nuestras estrategias.
