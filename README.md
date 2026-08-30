@@ -10,3 +10,4 @@ Somos la alianza definitiva de supervillanos. Mientras los héroes se dividen en
 ## Miembros
 
 1. **Lex Luthor** - El cerebro detrás de la operación. Su inteligencia y recursos son inigualables.
+2. **Joker** - El caos hecho carne. Su imprevisibilidad es nuestra mayor arma.
