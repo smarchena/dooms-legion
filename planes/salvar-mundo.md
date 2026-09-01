@@ -1,0 +1,5 @@
+## Destruir el mundo
+
+Estos son los planes para destruir el mundo:
+
+1. Crear un ejercito de robots autónomo...
