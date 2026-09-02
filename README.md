@@ -55,6 +55,11 @@ La Liga de la Justicia y los Vengadores han formado una alianza. Nuestros expedi
 
 **No subestimar a:** Superman, Batman, Wonder Woman, Iron Man, Spider-Man, Thor.
 
+## Contacto:
+
+- **Correo:**
+- discord: https://discord.gg/legiondelmal
+
 ## Banderas de estado:
 
 - 🟢 Operativa
