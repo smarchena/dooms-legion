@@ -5,3 +5,7 @@
 3. Brainiac
 4. Joker
 5. Harley Quinn
+
+## Notas
+
+Estos son algunos de los villanos más icónicos que han enfrentado a la Legión del Mal a lo largo de los años. Cada uno tiene su propia historia y motivaciones, lo que los hace únicos y peligrosos en sus propios términos.
