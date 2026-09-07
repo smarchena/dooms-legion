@@ -9,7 +9,11 @@
 ![Licencia](https://img.shields.io/github/license/smarchena/git-github-devTalles?cacheSeconds=60)
 
 
+<<<<<<< HEAD
 # 🦹‍♂️ La Legión del Mal - Desde Remoto
+=======
+# 🦹‍♂️ La Legión del Mal - Desde Local
+>>>>>>> 132ad45 (fix: update local README)
 
 > _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
 > — Lex Luthor, fundador
