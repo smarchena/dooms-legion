@@ -6,7 +6,7 @@
 ![Release](https://img.shields.io/github/v/release/smarchena/git-github-devTalles)
 ![Issues](https://img.shields.io/github/issues/smarchena/git-github-devTalles)
 ![Último commit](https://img.shields.io/github/last-commit/smarchena/git-github-devTalles)
-![Licencia](https://img.shields.io/github/license/smarchena/git-github-devTalles)
+![Licencia](https://img.shields.io/github/license/smarchena/git-github-devTalles?cacheSeconds=60)
 
 
 # 🦹‍♂️ La Legión del Mal
