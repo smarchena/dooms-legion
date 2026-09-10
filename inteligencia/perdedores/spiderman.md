@@ -17,3 +17,16 @@ Spiderman es un superhéroe ficticio que aparece en los cómics estadounidenses 
 - Gwen Stacy: Nueva York, Estados Unidos
 - J. Jonah Jameson: Nueva York, Estados Unidos
 - Aunt May: Nueva York, Estados Unidos
+
+
+### Películas de Spiderman
+- Spider-Man (2002)
+- Spider-Man 2 (2004)
+- Spider-Man 3 (2007)
+- The Amazing Spider-Man (2012)
+- The Amazing Spider-Man 2 (2014)
+- Spider-Man: Homecoming (2017)
+- Spider-Man: Far From Home (2019)
+- Spider-Man: No Way Home (2021)
+- Spider-Man: Across the Spider-Verse (2023)
+- Spider-Man: Beyond the Spider-Verse (2024)
