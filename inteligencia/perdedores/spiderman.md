@@ -6,3 +6,14 @@ Spiderman es un superhéroe ficticio que aparece en los cómics estadounidenses 
 - Doctor Octopus
 - Green Goblin
 
+## Conocidos
+- Mary Jane Watson
+- Gwen Stacy
+- J. Jonah Jameson
+- Aunt May
+
+## Dónde localizar a sus conocidos
+- Mary Jane Watson: Nueva York, Estados Unidos
+- Gwen Stacy: Nueva York, Estados Unidos
+- J. Jonah Jameson: Nueva York, Estados Unidos
+- Aunt May: Nueva York, Estados Unidos
