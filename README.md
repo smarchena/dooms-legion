@@ -2,11 +2,11 @@
 
 ![Con logo](https://img.shields.io/badge/Git-2.45-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-![Workflow](https://img.shields.io/github/actions/workflow/status/smarchena/git-github-devTalles/ci.yml)
-![Release](https://img.shields.io/github/v/release/smarchena/git-github-devTalles)
-![Issues](https://img.shields.io/github/issues/smarchena/git-github-devTalles)
-![Último commit](https://img.shields.io/github/last-commit/smarchena/git-github-devTalles)
-![Licencia](https://img.shields.io/github/license/smarchena/git-github-devTalles?cacheSeconds=60)
+![Workflow](https://img.shields.io/github/actions/workflow/status/smarchena/dooms-legion/ci.yml)
+![Release](https://img.shields.io/github/v/release/smarchena/dooms-legion)
+![Issues](https://img.shields.io/github/issues/smarchena/dooms-legion)
+![Último commit](https://img.shields.io/github/last-commit/smarchena/dooms-legion)
+![Licencia](https://img.shields.io/github/license/smarchena/dooms-legion?cacheSeconds=60)
 
 
 # 🦹‍♂️ La Legión del Mal
