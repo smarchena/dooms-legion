@@ -6,6 +6,9 @@
 4. Joker
 5. Harley Quinn
 6. Darkseid
+7. Sinestro
+8. Deathstroke
+9. Black Manta
 
 ## Notas
 
