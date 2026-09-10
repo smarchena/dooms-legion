@@ -14,11 +14,11 @@
 > _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
 > — Lex Luthor, fundador
 
-## ¿Quiénes somos? - Remoto y Local
+## ¿Quiénes somos? 
 
 Somos la alianza definitiva de supervillanos. Mientras los héroes se dividen entre Metrópolis, Gotham y Nueva York, nosotros hemos hecho lo que ellos jamás lograron: unirnos. DC, Marvel, no importa el universo — aquí solo importa el objetivo.
 
-## Estructura de la organización!
+## Estructura de la organización
 ### Carpetas principales del plan
 
 ```
@@ -31,7 +31,7 @@ Somos la alianza definitiva de supervillanos. Mientras los héroes se dividen en
 📄 README.md        → Documentación principal del repositorio 
 ```
 
-## El Consejo de Villanos!!
+## El Consejo de Villanos
 
 | Rango                     | Miembro    | Rol                                                     |
 | ------------------------- | ---------- | ------------------------------------------------------- |
