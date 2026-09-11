@@ -15,7 +15,21 @@ on:
           - Joker
           - Mystique
           - Brainiac
+      mensaje:
+        description: "Mensaje para el consejo"
+        required: true
+        default: "La misión fue un éxito."
 
+
+      prioridad: 
+        description: "Nivel de prioridad"
+        required: true
+        type: choice
+        options:
+          - 🟢 Normal
+          - 🟡 Alta
+          - 🔴 Crítica
+        
 jobs:  
   transmitir-mensaje:   
     runs-on: ubuntu-latest
