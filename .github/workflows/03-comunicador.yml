@@ -60,7 +60,7 @@ jobs:
           echo " ---- Mensaje: ------- "
           cowsay -f "${{inputs.cow_character}}" "${{inputs.mensaje}}"
           echo ""
-          echo " -- $${{inputs.villano}}"
+          echo " - ${{inputs.villano}}"
           echo "..."
 
      
