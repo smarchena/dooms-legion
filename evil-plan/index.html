@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORLDS ENDING!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanlines"></div>
+
+    <header class="hud-top">
+      <div class="brand">
+        <span class="logo">☠</span>
+        <div>
+          <h1>PROYECTO OMEGA</h1>
+          <p>SISTEMA DE LANZAMIENTO ORBITAL — ACCESO NIVEL 9</p>
+        </div>
+      </div>
+      <div class="status">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">ARMANDO OJIVA</span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="map-wrap">
+        <canvas id="map"></canvas>
+        <div class="crosshair" id="crosshair">
+          <span class="ring"></span>
+          <span class="ring r2"></span>
+          <span class="label" id="targetLabel">OBJETIVO</span>
+        </div>
+        <div class="grid-overlay"></div>
+      </section>
+
+      <aside class="panel">
+        <div class="countdown">
+          <p class="cd-label">IMPACTO EN</p>
+          <div class="cd-time" id="clock">00:00:00</div>
+          <div class="cd-bar"><span id="cdFill"></span></div>
+        </div>
+
+        <div class="readout">
+          <div class="row">
+            <span>ORIGEN</span><b id="origin">BASE VULCANO</b>
+          </div>
+          <div class="row"><span>DESTINO</span><b id="destName">—</b></div>
+          <div class="row"><span>DISTANCIA</span><b id="distance">— km</b></div>
+          <div class="row"><span>VELOCIDAD</span><b id="speed">— Mach</b></div>
+          <div class="row"><span>ALTITUD</span><b id="altitude">— km</b></div>
+          <div class="row"><span>PROGRESO</span><b id="progress">0%</b></div>
+        </div>
+
+        <div class="targets">
+          <p class="tg-label">SELECCIONAR OBJETIVO</p>
+          <div class="tg-buttons" id="targetButtons"></div>
+        </div>
+
+        <div class="controls">
+          <button id="launchBtn" class="btn primary">
+            ▶ INICIAR LANZAMIENTO
+          </button>
+          <button id="abortBtn" class="btn danger" disabled>■ ABORTAR</button>
+        </div>
+
+        <div class="log" id="log"></div>
+      </aside>
+    </main>
+
+    <footer class="hud-bot">
+      <span>LAT: <b id="lat">--.--</b></span>
+      <span>LON: <b id="lon">--.--</b></span>
+      <span class="blink">// SIMULACIÓN — SOLO DEMOSTRACIÓN</span>
+      <span id="clockNow">--:--:--</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
