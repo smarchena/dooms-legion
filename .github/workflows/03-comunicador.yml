@@ -29,6 +29,7 @@ on:
           - daemon
           - dragon
           - dragon-and-cow
+          - ghostbusters
 
       prioridad: 
         description: "Nivel de prioridad"
