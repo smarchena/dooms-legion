@@ -1,0 +1,45 @@
+# ╔══════════════════════════════════════════════════════╗
+# ║  WORKFLOW SABOTEADO - EJERCICIO DE DEPURACIÓN        ║
+# ║                                                      ║
+# ║  Un espía de Batman ha saboteado este workflow.      ║
+# ║  Tiene un ERROR DE EJECUCIÓN.                        ║
+# ║                                                      ║
+# ║  Tu misión:                                          ║
+# ║  1. Sube este archivo al repositorio                 ║
+# ║  2. El workflow SÍ va a ejecutarse (a diferencia     ║
+# ║     del error de YAML)                               ║
+# ║  3. Ve a los LOGS del workflow en la pestaña Actions ║
+# ║  4. Encuentra en qué step falla y por qué            ║
+# ║  5. Corrige el error y haz push de nuevo             ║
+# ╚══════════════════════════════════════════════════════╝
+
+name: 🔍 Escaneo de seguridad de Brainiac
+on: push
+jobs:
+  escaneo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Brainiac accede a la base
+        uses: actions/checkout@v4
+
+      - name: Escanear planes de la Legión
+        run: |
+          echo "🔍 Escaneando planes..."
+          ls planes/
+          echo "✅ Planes verificados."
+      - name: Escanear fichas de villanos
+        run: |
+          echo "🔍 Escaneando fichas de villanos..."
+          ls vilanos/
+          echo "✅ Fichas verificadas."
+      - name: Escanear inteligencia sobre héroes
+        run: |
+          echo "🔍 Escaneando expedientes de héroes..."
+          ls inteligencia/
+          echo "✅ Expedientes verificados."
+      - name: Reporte final
+        run: |
+          echo "📊 REPORTE DE SEGURIDAD"
+          echo "======================"
+          echo "Todos los sistemas verificados."
+          echo "Brainiac: 'La base está segura. Por ahora.'"

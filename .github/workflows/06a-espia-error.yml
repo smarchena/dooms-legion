@@ -1,0 +1,22 @@
+# ╔══════════════════════════════════════════════════════╗
+# ║     WORKFLOW SABOTEADO - EJERCICIO DE DEPURACIÓN     ║
+# ║                                                      ║
+# ║  Un espía de Batman ha saboteado este workflow.      ║
+# ║  Tiene un ERROR DE SINTAXIS YAML.                    ║
+# ╚══════════════════════════════════════════════════════╝
+
+name: 📡 Transmisión de emergencia
+on: 
+  workflow_dispatch: # También se puede ejecutar manualmente para la demo en clase
+jobs:
+  transmision:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar alerta a la Fortaleza Prohibida
+        run: echo "🚨 Alerta de emergencia enviada al Consejo"
+
+      - name: Confirmar recepción de Brainiac
+        run: echo "✅ Brainiac confirma recepción de la alerta"
+
+      - name: Activar protocolo de defensa
+        run: echo "🛡️ Protocolo de defensa activado por Magneto"
