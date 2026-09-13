@@ -30,7 +30,7 @@ jobs:
       - name: Escanear fichas de villanos
         run: |
           echo "🔍 Escaneando fichas de villanos..."
-          ls vilanos/
+          ls miembros/
           echo "✅ Fichas verificadas."
       - name: Escanear inteligencia sobre héroes
         run: |
