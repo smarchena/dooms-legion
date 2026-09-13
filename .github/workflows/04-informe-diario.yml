@@ -1,0 +1,70 @@
+name: Informe Diario de Dominación
+on:
+  schedule:
+    # Los campos del cron son, en orden:
+          #  ┌───────────── minuto (0 - 59)
+          #  │ ┌───────────── hora (0 - 23)
+          #  │ │ ┌───────────── día del mes (1 - 31)
+          #  │ │ │ ┌───────────── mes (1 - 12)
+          #  │ │ │ │ ┌───────────── día de la semana (0 - 6; 0 = domingo)
+          #  │ │ │ │ │
+    - cron: "0 8 * * *"  # Cada día a las 8:00 UTC
+  workflow_dispatch: 
+
+permissions:
+  contents: write
+
+jobs:
+  informe-diario:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Brainiac accede a la base
+        uses: actions/checkout@v4
+
+      - name: Generar informe de dominación
+        run: |
+          # Obtener un dato curioso como "inteligencia interceptada"
+          DATO=$(curl -s "https://uselessfacts.jsph.pl/api/v2/facts/random?language=en" | python3 -c "import sys,json; print(json.load(sys.stdin)['text'])" 2>/dev/null || echo "Error de transmisión. Los héroes podrían estar bloqueando nuestra señal.")
+          
+          # Obtener fecha
+          FECHA=$(date -u +"%d de %B de %Y - %H:%M UTC")
+
+          # Generar número aleatorio para reportes de sistemas
+          # Esto genera un número aleatorio entre 90 y 100 (inclusive)
+          # RANDOM % 11 genera un número entre 0 y 10, luego se suma 90 -> rango 90-100
+          ESCUDO=$((RANDOM % 11 + 90))
+
+          # Esto genera un número aleatorio entre 16 y 20 (inclusive)
+          # RANDOM % 5 genera un número entre 0 y 4, luego se suma 16 -> rango 16-20
+          DRONES=$((RANDOM % 5 + 16))
+
+          VIGILANCIA=$((RANDOM % 6 + 95))
+
+          # Escribir el informe al final del README
+          cat >> README.md << EOF
+
+          ---
+          ## 📊 Informe diario de Brainiac
+          **Fecha:** ${FECHA}
+          **Estado de operaciones:**
+          - 📡 Sistemas de la Fortaleza Prohibida: ✅ En línea
+          - 🌙 Base Lunar: ⚠️ Operativa con restricciones
+          - 🛰️ Proyecto Glaciar-1: En desarrollo
+          - 🧬 Proyecto Krypton: En planificación
+          **Métricas del día:**
+          - Escudo electromagnético de Magneto: ${ESCUDO}% de capacidad
+          - Drones de Brainiac activos: ${DRONES}/20
+          - Cobertura de vigilancia global: ${VIGILANCIA}%
+          **Inteligencia interceptada del día:**
+          > ${DATO}
+          _Informe generado automáticamente por Brainiac v12.0_
+          _"Los datos no mienten. Los seres orgánicos sí."_
+          EOF
+          
+      - name: Brainiac archiva el informe
+        run: |
+          git config user.name "Brainiac"
+          git config user.email "brainiac@legion-del-mal.dev"
+          git add README.md
+          git commit -m "📊 Informe diario de dominación - $(date -u +%Y-%m-%d)"
+          git push
