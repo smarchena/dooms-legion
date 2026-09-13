@@ -1,6 +1,6 @@
 name: Informe Diario de Dominación
 on:
-  schedule:
+#   schedule:
     # Los campos del cron son, en orden:
           #  ┌───────────── minuto (0 - 59)
           #  │ ┌───────────── hora (0 - 23)
@@ -8,7 +8,7 @@ on:
           #  │ │ │ ┌───────────── mes (1 - 12)
           #  │ │ │ │ ┌───────────── día de la semana (0 - 6; 0 = domingo)
           #  │ │ │ │ │
-    - cron: "0 8 * * *"  # Cada día a las 8:00 UTC
+    # - cron: "0 8 * * *"  # Cada día a las 8:00 UTC
   workflow_dispatch: 
 
 permissions:
@@ -60,7 +60,7 @@ jobs:
           _Informe generado automáticamente por Brainiac v12.0_
           _"Los datos no mienten. Los seres orgánicos sí."_
           EOF
-          
+
       - name: Brainiac archiva el informe
         run: |
           git config user.name "Brainiac"
