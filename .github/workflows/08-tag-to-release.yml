@@ -1,0 +1,96 @@
+name: 🏷️ Tag a Release - Publicar versión
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag a publicar (ej. v1.0.0)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  crear-release:
+    name: Crear release con changelog
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio (historial completo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Determinar tag actual y anterior
+        id: tags
+        run: |
+          TAG_ACTUAL="${{ github.event.inputs.tag || github.ref_name }}"
+          TAG_ANTERIOR=$(git tag --sort=-creatordate | grep -v "^${TAG_ACTUAL}$" | head -n 1)
+
+          echo "actual=${TAG_ACTUAL}" >> "$GITHUB_OUTPUT"
+          echo "anterior=${TAG_ANTERIOR}" >> "$GITHUB_OUTPUT"
+
+          echo "Tag actual: ${TAG_ACTUAL}"
+          echo "Tag anterior: ${TAG_ANTERIOR:-(ninguno, primer release)}"
+
+      - name: Generar changelog
+        id: changelog
+        run: |
+          TAG_ACTUAL="${{ steps.tags.outputs.actual }}"
+          TAG_ANTERIOR="${{ steps.tags.outputs.anterior }}"
+
+          if [ -z "$TAG_ANTERIOR" ]; then
+            RANGO="$TAG_ACTUAL"
+            COMPARACION=""
+          else
+            RANGO="${TAG_ANTERIOR}..${TAG_ACTUAL}"
+            COMPARACION="**Cambios completos:** https://github.com/${{ github.repository }}/compare/${TAG_ANTERIOR}...${TAG_ACTUAL}"
+          fi
+
+          COMMITS=$(git log --no-merges --pretty=format:'- %s (`%h`) — @%an' "$RANGO")
+          TOTAL=$(git log --no-merges --oneline "$RANGO" | wc -l | tr -d ' ')
+
+          {
+            echo 'notas<<CHANGELOG_EOF'
+            echo "## 🦹 Novedades de la versión ${TAG_ACTUAL}"
+            echo ""
+            echo "**Commits incluidos:** ${TOTAL}"
+            if [ -n "$TAG_ANTERIOR" ]; then
+              echo "**Versión anterior:** ${TAG_ANTERIOR}"
+            else
+              echo "**Primer release del repositorio.**"
+            fi
+            echo ""
+            echo "### 📝 Registro de cambios"
+            echo ""
+            if [ -z "$COMMITS" ]; then
+              echo "_Sin commits nuevos desde la versión anterior._"
+            else
+              echo "$COMMITS"
+            fi
+            echo ""
+            echo "### 📂 Archivos modificados"
+            echo ""
+            echo '```'
+            git diff --stat $([ -n "$TAG_ANTERIOR" ] && echo "$TAG_ANTERIOR") "$TAG_ACTUAL" || echo "Sin diferencias"
+            echo '```'
+            echo ""
+            echo "$COMPARACION"
+            echo 'CHANGELOG_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Publicar release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tags.outputs.actual }}
+          name: 🦹 Legión del Mal ${{ steps.tags.outputs.actual }}
+          body: ${{ steps.changelog.outputs.notas }}
+          draft: false
+          prerelease: ${{ contains(steps.tags.outputs.actual, '-') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
