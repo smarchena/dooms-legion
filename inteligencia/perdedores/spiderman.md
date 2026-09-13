@@ -30,3 +30,10 @@ Spiderman es un superhéroe ficticio que aparece en los cómics estadounidenses 
 - Spider-Man: No Way Home (2021)
 - Spider-Man: Across the Spider-Verse (2023)
 - Spider-Man: Beyond the Spider-Verse (2024)
+
+## Estrategia recomendada
+
+Esta estrategia se centra en aprovechar las debilidades de Spiderman y sus conocidos para neutralizar su influencia y proteger a la Legión del Mal. A continuación, se detallan los pasos recomendados:
+- Identificar y monitorear a los conocidos de Spiderman: Mantener un seguimiento constante de Mary Jane Watson, Gwen Stacy, J. Jonah Jameson y Aunt May para anticipar sus movimientos y posibles interacciones con Spiderman.
+- Aprovechar la vulnerabilidad emocional de Spiderman: Utilizar la preocupación de Spiderman por sus seres queridos para distraerlo y manipular sus acciones. Esto puede incluir amenazas o situaciones que pongan en peligro a sus conocidos.
+- Crear situaciones de distracción: Generar eventos o problemas en Nueva York que requieran la atención de Spiderman, desviando su enfoque de la Legión del Mal y sus operaciones.
